@@ -263,13 +263,16 @@
     </section>
     
     <section id="contact">
-        <h2><b>Contact</b></h2>
-        <p> Abhishek A. Raikwar</p>
-        <p>Email: abhishekraikwar@gmail.com</p>
-        <p>Instagram: asver_the_conquerer</p>
-        <p>Youtube: Full_of_Entertain</p>
-        <p>Get in touch with me for collaborations or commissions.</p>
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-message"></p>
     </section>
+    
     
     <footer>
         <p>&copy; 2025 Abhishek Raikwar. All rights reserved.</p>
@@ -302,6 +305,15 @@
         function toggleMenu() {
         document.getElementById("nav-menu").classList.toggle("show");
         }
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        document.getElementById("form-message").innerText = "Thank you for your message! I'll get back to you soon.";
+    
+        // Optional: Clear form fields
+        this.reset();
+        });
+
     </script>
 </body>
 </html>
