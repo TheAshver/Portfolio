@@ -37,5 +37,44 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input {
+    width: 200px;
+    height: 40px;
+}
+
+.contact-form textarea {
+    width: 300px;
+    height: 40px; 
+    resize: none;
+}
+
+.contact-form button {
+    height: 40px;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #e68900;
+}
 
 
