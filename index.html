@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(20, 20, 20, 0.9);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: 0.5s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff9800;
+        }
+        section {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: 80px auto;
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dark-mode {
+            background: #000;
+            color: #f0f0f0;
+        }
+        #dark-mode-toggle {
+            background: #ff9800;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #dark-mode-toggle:hover {
+            background: #e68900;
+        }
+        footer {
+            background: rgba(20, 20, 20, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abhishek Raikwar</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artwork">Artwork</a></li>
+                <li><a href="#comics">Comics</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my world of art and comics.</p>
+    </section>
+    
+    <section id="artwork">
+        <h2>Artwork</h2>
+        <p>Showcasing my best illustrations and designs.</p>
+        <img src="artwork-sample.jpg" alt="Artwork" class="art-image">
+    </section>
+    
+    <section id="comics">
+        <h2>Comics</h2>
+        <p>Discover my latest comic creations.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an artist and aspiring anime studio founder.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me for collaborations or commissions.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Abhishek Raikwar. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Reveal sections on scroll
+        const sections = document.querySelectorAll("section");
+        const revealOnScroll = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 50) {
+                    section.classList.add("show");
+                }
+            });
+        };
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
