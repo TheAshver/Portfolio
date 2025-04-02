@@ -77,7 +77,23 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
+        .dark-mode {
+            background: #000;
+            color: #f0f0f0;
+        }
+        #dark-mode-toggle {
+            background: #ff9800;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #dark-mode-toggle:hover {
+            background: #e68900;
+        }
         footer {
             background: rgba(20, 20, 20, 0.9);
             color: white;
@@ -291,7 +307,10 @@
                 });
             });
         });
-        
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
         const sections = document.querySelectorAll("section");
         const revealOnScroll = () => {
             sections.forEach(section => {
