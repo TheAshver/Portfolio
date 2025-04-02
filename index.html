@@ -139,16 +139,19 @@
         }
 
         @media (max-width: 768px) {
-        nav ul {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            background: #1e1e1e;
-            width: 100%;
-            top: 60px;
-            left: 0;
-            text-align: center;
+            nav ul {
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        background: #1e1e1e;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
     
         nav ul li {
             display: block;
@@ -161,7 +164,8 @@
         }
 
         nav ul.show {
-            display: flex;
+        visibility: visible;
+        opacity: 1;
         }
 
     </style>
