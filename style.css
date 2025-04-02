@@ -42,7 +42,7 @@ footer {
 }
 
 .art-image {
-    max-width: 300px;  /* Adjust as needed */
+    max-width: 300px; 
     height: auto;
-    border-radius: 10px;  /* Optional for rounded corners */
+    border-radius: 10px; 
 }
