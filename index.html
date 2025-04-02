@@ -28,18 +28,13 @@
             transition: 0.5s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
         }
         nav ul li {
+            display: inline;
             margin: 0 15px;
         }
         nav ul li a {
@@ -48,10 +43,8 @@
             font-size: 18px;
             transition: 0.3s;
         }
-        nav ul li a.active {
+        nav ul li a:hover {
             color: #ff9800;
-            font-weight: bold;
-            border-bottom: 2px solid #ff9800;
         }
         section {
             padding: 100px 20px;
@@ -82,6 +75,9 @@
             border-radius: 5px;
             transition: 0.3s;
         }
+        #dark-mode-toggle:hover {
+            background: #e68900;
+        }
         footer {
             background: rgba(20, 20, 20, 0.9);
             color: white;
@@ -91,6 +87,50 @@
             bottom: 0;
             width: 100%;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .art-image1 {
+            width: 300px;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            background-color: #ddd;
+        }
+        .art-image2 {
+            width: 400px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 10px;
+            background-color: #ddd;
+        }
+        .video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #222;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    video {
+        width: 90%;
+    }
+}
     </style>
 </head>
 <body>
@@ -115,14 +155,85 @@
         <p>Explore my world of art and comics.</p>
     </section>
     
+    <section id="character">
+        <h2>Character</h2>
+        <p>Showcasing my best character designs</p>
+        <div class="image-container">
+            <img src="Portfolio_Data/Cyborg.jpg" alt="Cyborg Artwork" class="art-image1" loading="lazy">
+            <img src="Portfolio_Data/Darius.jpg" alt="Darius Artwork" class="art-image1" loading="lazy">
+            <img src="Portfolio_Data/Modern Ninja.jpg" alt="Modern Ninja Artwork" class="art-image1" loading="lazy">
+            <img src="Portfolio_Data/Snow Boarder.jpg" alt="Modern Ninja Artwork" class="art-image1" loading="lazy">
+            <img src="Portfolio_Data/Zombie character.jpg" alt="Modern Ninja Artwork" class="art-image1" loading="lazy">
+        </div>
+    </section>
+    
+    <section id="conceptart">
+        <h2>Conceptart</h2>
+        <p>Discover my best Concept arts</p>
+        <img src="Portfolio_Data/Lake.jpg" alt="Lake Artwork" class="art-image2">
+        <img src="Portfolio_Data/Samurai Village.jpg" alt="Samurai Village Artwork" class="art-image2">
+        <img src="Portfolio_Data/Stone Valley.jpg" alt="Stone Valley Artwork" class="art-image2">
+        <img src="Portfolio_Data/Train Interior Concept.jpg" alt="Train Interior Concept Artwork" class="art-image2">
+        <img src="Portfolio_Data/Village.jpg" alt="Village Artwork" class="art-image2">
+        <img src="Portfolio_Data/Volcano.jpg" alt="Volcano Artwork" class="art-image2">
+    </section>
+
+    <section id="animatics">
+        <h2>Animatics</h2>
+        <p>Explore my storyboard animatics.</p>
+        <div class="video-container">
+            <video width="400" controls>
+                <source src="Portfolio_Data/PickPocket_Teaser.mp4" type="video/mp4">    
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Scene_168.mp4" type="video/mp4">   
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Snow Skating new.mp4" type="video/mp4">   
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Until Death.mp4" type="video/mp4">   
+            </video>
+        </div>
+    </section>
+    
+    <section id="animation">
+        <h2>Animation</h2>
+        <p>Check out my animation projects.</p>
+        <div class="video-container">
+            <video width="400" controls>
+                <source src="Portfolio_Data/Ganesh ji and Kartikeya Race.mp4" type="video/mp4">
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Happy Diwali.mp4" type="video/mp4">
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Happy Holi.mp4" type="video/mp4">
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Merry Christmas.mp4" type="video/mp4">
+            </video>
+            <video width="400" controls>
+                <source src="Portfolio_Data/Navratri Special.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a 2D artist and aspiring anime artist.I am a hardworking and reliable 2D artist
+            with strong ability in Character and Background Design, Story Boarding and Animatics and
+            Concept Artist. Highly organized, proactive and punctual with team-oriented mentality. Always
+            looking to upgrade myself as an artist.</p>
+    </section>
+    
     <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <h2><b>Contact</b></h2>
+        <p> Abhishek A. Raikwar</p>
+        <p>Email: abhishekraikwar@gmail.com</p>
+        <p>Instagram: asver_the_conquerer</p>
+        <p>Youtube: Full_of_Entertain</p>
+        <p>Get in touch with me for collaborations or commissions.</p>
     </section>
     
     <footer>
@@ -130,37 +241,29 @@
     </footer>
     
     <script>
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll("nav ul li a");
-
-        window.addEventListener("scroll", () => {
-            let current = "";
-
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").substring(1) === current) {
-                    link.classList.add("active");
-                }
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
         });
-
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-        }
+        const sections = document.querySelectorAll("section");
+        const revealOnScroll = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 50) {
+                    section.classList.add("show");
+                }
+            });
+        };
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
     </script>
 </body>
 </html>
