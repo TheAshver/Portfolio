@@ -51,21 +51,22 @@ footer {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 40px; 
 }
 
 .contact-form input {
     width: 200px;
-    height: 40px;
 }
 
 .contact-form textarea {
-    width: 300px;
-    height: 40px; 
-    resize: none;
+    width: 200px; 
+    resize: none; 
+    overflow: hidden; 
+    vertical-align: middle;
 }
 
 .contact-form button {
-    height: 40px;
+    height: 42px; 
     padding: 10px;
     background-color: #ff9800;
     border: none;
@@ -76,5 +77,3 @@ footer {
 .contact-form button:hover {
     background-color: #e68900;
 }
-
-
