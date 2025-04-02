@@ -88,18 +88,19 @@
             width: 100%;
         }
         .image-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-
         .art-image {
-        width: 300px; /* Fixed width */
-        height: 400px; /* Fixed height */
-        object-fit: cover; /* Ensures images are cropped to fit */
-        border-radius: 10px; /* Optional for rounded corners */
+            width: 300px;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            background-color: #ddd;
         }
-        </style>
+    </style>
 </head>
 <body>
     <header>
@@ -137,19 +138,14 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a 2D artist and aspiring anime artist.I am a hardworking and reliable 2D artist
-            with strong ability in Character and Background Design, Story Boarding and Animatics and
-            Concept Artist. Highly organized, proactive and punctual with team-oriented mentality. Always
-            looking to upgrade myself as an artist.</p>
+        <p>I am a 2D artist and aspiring anime artist...</p>
     </section>
     
     <section id="contact">
         <h2>Contact</h2>
-        <p> Abhishek A. Raikwar</p>
         <p>Email: abhishekraikwar@gmail.com</p>
         <p>Instagram: asver_the_conquerer</p>
         <p>Youtube: Full_of_Entertain</p>
-        <p>Get in touch with me for collaborations or commissions.</p>
     </section>
     
     <footer>
@@ -157,7 +153,6 @@
     </footer>
     
     <script>
-        // Smooth scrolling
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -166,14 +161,10 @@
                 });
             });
         });
-
-        // Dark mode toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
-
-        // Reveal sections on scroll
         const sections = document.querySelectorAll("section");
         const revealOnScroll = () => {
             sections.forEach(section => {
