@@ -36,14 +36,17 @@
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        display: flex; /* Ensure flexbox is used */
+        justify-content: center; /* Center items */
+        gap: 5px; /* Adjust spacing */
+        padding: 0;
+        margin: 0;
         }
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+        display: inline-block;
+        margin: 0;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
